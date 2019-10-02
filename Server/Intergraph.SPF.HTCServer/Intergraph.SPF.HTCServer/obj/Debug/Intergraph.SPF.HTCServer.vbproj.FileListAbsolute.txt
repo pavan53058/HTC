@@ -1,0 +1,32 @@
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCTServer\bin\Intergraph.SPF.HTCServer.dll
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCTServer\bin\Intergraph.SPF.HTCServer.pdb
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCTServer\bin\Intergraph.SPF.HTCServer.xml
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\SDVTServer\bin\Intergraph.SPF.HTCServer.dll
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\SDVTServer\bin\Intergraph.SPF.HTCServer.pdb
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\SDVTServer\bin\Intergraph.SPF.HTCServer.xml
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCLServer\bin\Intergraph.SPF.HTCServer.dll
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCLServer\bin\Intergraph.SPF.HTCServer.pdb
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCLServer\bin\Intergraph.SPF.HTCServer.xml
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCFServer\bin\Intergraph.SPF.HTCServer.dll
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCFServer\bin\Intergraph.SPF.HTCServer.pdb
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCFServer\bin\Intergraph.SPF.HTCServer.xml
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCSServer\bin\Intergraph.SPF.HTCServer.dll
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCSServer\bin\Intergraph.SPF.HTCServer.pdb
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCSServer\bin\Intergraph.SPF.HTCServer.xml
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HalwaServer\bin\Intergraph.SPF.HTCServer.dll
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HalwaServer\bin\Intergraph.SPF.HTCServer.pdb
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HalwaServer\bin\Intergraph.SPF.HTCServer.xml
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.SPF.HTCServer\Intergraph.SPF.HTCServer\obj\Debug\Resources.resources
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.SPF.HTCServer\Intergraph.SPF.HTCServer\obj\Debug\Intergraph.SPF.HTCServer.vbproj.GenerateResource.cache
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.SPF.HTCServer\Intergraph.SPF.HTCServer\obj\Debug\Intergraph.SPF.HTCServer.vbproj.CoreCompileInputs.cache
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.SPF.HTCServer\Intergraph.SPF.HTCServer\obj\Debug\Intergraph.SPF.HTCServer.dll
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.SPF.HTCServer\Intergraph.SPF.HTCServer\obj\Debug\Intergraph.SPF.HTCServer.xml
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.SPF.HTCServer\Intergraph.SPF.HTCServer\obj\Debug\Intergraph.SPF.HTCServer.pdb
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCPServer\bin\Intergraph.SPF.HTCServer.dll
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCPServer\bin\Intergraph.SPF.HTCServer.pdb
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCPServer\bin\Intergraph.SPF.HTCServer.xml
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.SPF.HTCServer\Intergraph.SPF.HTCServer\obj\Debug\Intergraph.SPF.HTCServer.vbproj.CopyComplete
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTC101Server\bin\Intergraph.SPF.HTCServer.dll
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTC101Server\bin\Intergraph.SPF.HTCServer.pdb
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTC101Server\bin\Intergraph.SPF.HTCServer.xml
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.SPF.HTCServer\Intergraph.SPF.HTCServer\obj\Debug\Intergraph.SPF.HTCServer.vbprojAssemblyReference.cache

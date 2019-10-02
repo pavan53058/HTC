@@ -1,0 +1,47 @@
+<Container>
+  <InterfaceDef>
+    <IObject UID="IVTLHasExactStringValidationRule" Name="IVTLHasExactStringValidationRule" Description="String Validation" ContainerID="VTL.VTLValidationSCHEMA" />
+    <IVTLRuleSupportsAutoGen />
+    <IEnumMetadata />
+    <IInterfaceDef />
+    <IInterfaceRole />
+    <ISchemaObj DisplayName="Exact String Rule" />
+    <IPropCategory />
+  </InterfaceDef>
+
+  <Rel>
+    <IObject UID="IVTLValidationRulePI.IVTLHasExactStringValidationRule" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+    <ISchemaObj />
+    <IRel UID1="IVTLValidationRulePI" IsRequired="False" DefUID="Implies" UID2="IVTLHasExactStringValidationRule" />
+  </Rel>
+
+  <Rel>
+    <IObject UID="VTLValidationRule.IVTLHasExactStringValidationRule" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+    <ISchemaObj />
+    <IRel UID1="VTLValidationRule" IsRequired="False" DefUID="Realizes" UID2="IVTLHasExactStringValidationRule" OrderValue="0" />
+  </Rel>
+
+  <Rel>
+    <IObject UID="IVTLHasExactStringValidationRule.VTLExactString" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+    <ISchemaObj />
+    <IRel UID1="IVTLHasExactStringValidationRule" DefUID="Exposes" UID2="VTLExactString" OrderValue="0" />
+  </Rel>
+
+  <Rel>
+    <IObject UID="IVTLHasExactStringValidationRule.IVTLPropertyValidationRule" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+    <ISchemaObj />
+    <IRel UID1="IVTLHasExactStringValidationRule" IsRequired="True" DefUID="Implies" UID2="IVTLPropertyValidationRule" OrderValue="0" />
+  </Rel>
+  
+  <PropertyDef>
+    <IObject UID="VTLExactString" Name="VTLExactString" Description="Exact string." ContainerID="VTL.VTLValidationSCHEMA" />
+    <IPropertyDef />
+    <ISchemaObj DisplayName="Exact string" />
+  </PropertyDef>
+
+  <Rel>
+    <IObject UID="VTLExactString.string" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+    <ISchemaObj />
+    <IRel UID1="VTLExactString" IsRequired="False" DefUID="ScopedBy" UID2="string" OrderValue="0" />
+  </Rel>
+</Container>

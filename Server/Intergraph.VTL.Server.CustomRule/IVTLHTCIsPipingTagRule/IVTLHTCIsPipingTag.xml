@@ -1,0 +1,47 @@
+﻿<Container>
+    <InterfaceDef>
+        <IObject UID="IVTLHTCIsPipingTagRule" Name="IVTLHTCIsPipingTagRule" Description="is Piping tag" ContainerID="VTL.VTLValidationSCHEMA" />
+        <IVTLRuleSupportsAutoGen />
+        <IEnumMetadata />
+        <IInterfaceDef />
+        <IInterfaceRole />
+        <ISchemaObj DisplayName="Is Piping Tag" />
+        <IPropCategory />
+    </InterfaceDef>
+
+    <Rel>
+        <IObject UID="IVTLValidationRulePI.IVTLHTCIsPipingTagRule" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+        <ISchemaObj />
+        <IRel UID1="IVTLValidationRulePI" IsRequired="False" DefUID="Implies" UID2="IVTLHTCIsPipingTagRule" />
+    </Rel>
+
+    <Rel>
+        <IObject UID="VTLValidationRule.IVTLHTCIsPipingTagRule" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+        <ISchemaObj />
+        <IRel UID1="VTLValidationRule" IsRequired="False" DefUID="Realizes" UID2="IVTLHTCIsPipingTagRule" OrderValue="0" />
+    </Rel>
+
+    <Rel>
+        <IObject UID="IVTLHTCIsPipingTagRule.VTLIsPipingTag" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+        <ISchemaObj />
+        <IRel UID1="IVTLHTCIsPipingTagRule" DefUID="Exposes" UID2="VTLIsPipingTag" OrderValue="0" />
+    </Rel>
+
+    <!--<Rel>
+        <IObject UID="IVTLHTCIsPipingTagRule.IVTLPropertyValidationRule" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+        <ISchemaObj />
+        <IRel UID1="IVTLHTCIsPipingTagRule" IsRequired="True" DefUID="Implies" UID2="IVTLPropertyValidationRule" OrderValue="0" />
+    </Rel>-->
+
+    <PropertyDef>
+        <IObject UID="VTLIsPipingTag" Name="VTLIsPipingTag" Description="Is Piping Tag" ContainerID="VTL.VTLValidationSCHEMA" />
+        <IPropertyDef />
+        <ISchemaObj DisplayName="Is Piping Tag" />
+    </PropertyDef>
+
+    <Rel>
+        <IObject UID="VTLIsPipingTag.string" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+        <ISchemaObj />
+        <IRel UID1="VTLIsPipingTag" IsRequired="False" DefUID="ScopedBy" UID2="string" OrderValue="0" />
+    </Rel>
+</Container>

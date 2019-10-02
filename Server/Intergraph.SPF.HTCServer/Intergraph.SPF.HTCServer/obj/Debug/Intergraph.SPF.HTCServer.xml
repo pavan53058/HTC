@@ -1,0 +1,247 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Intergraph.SPF.HTCServer
+</name>
+</assembly>
+<members>
+<member name="T:My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:SPF.Server.Schema.Interface.Default.IHTCAutoSignOffOverdueStepsTaskDefault">
+ <summary>
+ Auto Sign off "Review Transmittal" step based on the "SPFWFOptNoOfDaysOverDueBeforeExpiration" from system options
+ get all the steps with specific name as parameter and are RS
+ loop through the steps and sign off
+ Send email to the corresponding user about the action taken
+ </summary>
+</member>
+<member name="M:SPF.Server.Schema.Interface.Default.IHTCAutoSignOffOverdueStepsTaskDefault.GetOverDueSteps">
+ <summary>
+ Get all the WF steps with the name "Review Transmittal" and are RS 
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SPF.Server.Schema.Interface.Default.IHTCAutoSignOffOverdueStepsTaskDefault.GetWFStepUsers(SPF.Server.Schema.Interface.Generated.ISPFObjectWorkflowStep)">
+ <summary>
+ Get all the users associated with this step.This is to notfy all the user about the system auto-signoff
+ </summary>
+ <param name="pobjObjectWorkflowStep"></param>
+ <returns></returns>
+</member>
+<member name="T:SPF.Server.Schema.Interface.Default.IHTCDocumentMasterDefault">
+ <summary>
+ This override is to handle specific behaviours on master object
+ </summary>
+</member>
+<member name="M:SPF.Server.Schema.Interface.Default.IHTCDocumentMasterDefault.OnCreate(SPF.Server.Schema.Model.CreateEventArgs)">
+ <summary>
+Get the old doc from some property
+copy the files
+attach the files to the new document
+This logic appies only to Vendor print documents and documents with "HTCOldDocumentName" proeprty set on doc master
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:SPF.Server.Schema.Interface.Default.IHTCDocumentMasterDefault.OnDelete(SPF.Server.Schema.Model.SuppressibleEventArgs)">
+ <summary>
+ If a copied master document is getting deleted the remove the relation between the EW and original Document
+ Before Delete
+ 
+ EW====>Doc(revision)
+ ||      ||
+ Document Master(Copied)
+ 
+ After Delete
+ 
+ EW= X Delete this rel X =>Doc(revision)
+ XX      XX
+ Document Master(Copied)--Delete
+ 
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:SPF.Server.Schema.Interface.Default.IHTCDocumentRevisionDefault.BuildDocument(SPF.Server.Schema.Interface.Generated.IObject)">
+ <summary>
+ Prepare document contain for further use
+ </summary>
+ <param name="pobjDoument"></param>
+ <returns></returns>
+</member>
+<member name="M:SPF.Server.Schema.Interface.Default.IHTCDocumentRevisionDefault.OnBuildXMLForCopyDocumentWithFile(SPF.Server.Schema.Interface.Default.DocumentObject,System.String,System.String,SPF.Server.Schema.Collections.IObjectDictionary,System.Boolean)">
+ <summary>
+ Build the new document container to copy
+ </summary>
+ <param name="pobjDocument"></param>
+ <param name="pstrPlantUID"></param>
+ <param name="pstrNewDocName"></param>
+ <param name="pcolAttachedFiles"></param>
+ <param name="pblnCopyMarkups"></param>
+ <returns></returns>
+</member>
+<member name="T:SPF.Server.Schema.Interface.Default.IHTCJobDefault">
+ <summary>
+ This override is to handle specific behaviours on Job/EW object
+ </summary>
+</member>
+<member name="M:SPF.Server.Schema.Interface.Default.IHTCJobDefault.OnUpdate(SPF.Server.Schema.Model.UpdateEventArgs)">
+ <summary>
+ On Update of Job/EW,if the status is set to "No" then all the related Copied documents should be deleted along with the rel between job and actual revision
+ Deleting the rel between Job and actual doc is already covered under "IHTCDocumentMasterDefault" interface behaviour
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="M:SPF.Server.Schema.Interface.Default.IHTCTransmittalDefault.OnRelationshipAdding(SPF.Server.Schema.Model.RelEventArgs)">
+ <summary>
+ Documents
+ </summary>
+ <param name="e"></param>
+</member>
+<member name="T:SPF.Server.Schema.Interface.Default.ISPFConditionDefault1">
+ <summary>
+ Override to handle the VP Document EWR count case
+ Group object attached Vendor prints should fall under 2 cases
+ Either all VPs should have one EWR number or none are attached to any EWR
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SPF.Server.Schema.Interface.Default.ISPFFileDefault1.GetJobDef(SPF.Server.Schema.Interface.Generated.IObject)">
+ <summary>
+ Gets the job def name to validate
+ </summary>
+ <param name="pobjLoader"></param>
+ <returns></returns>
+</member>
+<member name="M:SPF.Server.Schema.Interface.Default.ISPFFileDefault1.GetNoOfFiles(SPF.Server.Schema.Interface.Generated.IObject)">
+ <summary>
+ Gets the no.of allowed files from the import def instead of hard coding
+ </summary>
+ <param name="pobjLoader"></param>
+ <returns></returns>
+</member>
+<member name="M:SPF.Server.Schema.Interface.Default.ISPFFileDefault1.TransposeCSVFile(System.String,System.String)">
+ <summary>
+ This is for the Tag import
+Given Tag CSV will get transposed(invereted form) to support multiple classification types-otherwise,create specific classification imports need to be created
+ </summary>
+ <param name="pstrDecompressedFilePath"></param>
+ <param name="pblnHasHeaders"></param>
+</member>
+<member name="M:SPF.Server.Schema.Interface.Default.ISPFFileDefault1.GetUPCCode(System.String)">
+ <summary>
+ Get UPC code from the tag-this will be part of inverted/transposed CSV for RDL update import def
+ </summary>
+ <param name="pTagName"></param>
+ <returns></returns>
+</member>
+<member name="M:SPF.Server.Schema.Interface.Default.ISPFFileDefault1.SeperateFileColInCSVFile(System.String,System.UInt32,System.Boolean,System.Boolean)">
+ <summary>
+ Splits the comma seperated file column into multiple columns in the CSV--This is to avoid many computed columns to hanlde in import def
+ </summary>
+ <param name="pstrDecompressedFilePath"></param>
+ <param name="noOfFiles"></param>
+ <param name="pblnHasHeaders"></param>
+</member>
+<member name="M:SPF.Server.Schema.Interface.Default.ISPFObjectWorkflowStepDefault1.GetProjectDuration(SPF.Server.Schema.Interface.Generated.IObject)">
+ <summary>
+ Gets the project duration from the attached WF attached object
+ </summary>
+ <param name="pobjStartingObject"></param>
+ <returns></returns>
+</member>
+<member name="T:SPF.Server.Components.Workflow.ProcessSteps.HTCExtractTagTextFromDocument">
+ <summary>
+ This process step takes document inputs.
+ Navigates to Tax text,splits the tags and run query to find the available tags in the system
+ if a tag exist in the system then it relates to the current document 
+ </summary>
+</member>
+<member name="T:SPF.Server.Components.Workflow.ProcessSteps.HTCValidateProjectForReview">
+ <summary>
+ This process step validated the objects in the projects before submitting the project to the WF
+ </summary>
+</member>
+<member name="M:SPF.Server.Components.Workflow.ProcessSteps.HTCValidateProjectForReview.GetOpenTransmittals(System.String)">
+ <summary>
+ Gets all the open transmittals
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SPF.Server.Components.Workflow.ProcessSteps.HTCValidateProjectForReview.GetOpenDocuments(System.String)">
+ <summary>
+ Gets all the open documents
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SPF.Server.Components.Workflow.ProcessSteps.HTCValidateProjectForReview.GetMarkupsFromLatestVersion">
+ <summary>
+ Gets all the pending markups on the latest document versions
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SPF.Server.Components.Workflow.ProcessSteps.HTCValidateProjectForReview.DeleteExistingProjectCollectionRels(SPF.Server.Schema.Interface.Generated.IObject)">
+ <summary>
+ Removes the existing open items from the project collection
+ </summary>
+ <param name="pobjProjectCollection"></param>
+</member>
+<member name="T:Intergraph.VTL.Server.CustomRule.VTLHTCIsPipingTagRule">
+ <summary>
+ Validation rule to check the name of non piping tags
+ Non-piping tags should have unique name across the system
+ </summary>
+</member>
+<member name="M:Intergraph.VTL.Server.CustomRule.VTLHTCIsPipingTagRule.ExecuteValidation(SPF.Server.Schema.Interface.Generated.IVTLJob,SPF.Server.Schema.Interface.Generated.IVTLValidationRule,Intergraph.SPF.Services.RequestContextService.Implementation.ISPFRequestContextService)">
+ <summary>
+ Executes the validation.
+ </summary>
+ <param name="pobjJob">The pobj job.</param>
+ <param name="pobjRule">The pobj rule.</param>
+ <param name="pobjRequestContextService">The pobj request context service.</param>
+ <returns></returns>
+</member>
+<member name="M:Intergraph.VTL.Server.CustomRule.VTLHTCIsPipingTagRule.CreateValidationResult(System.Data.IDataReader,SPF.Server.Schema.Interface.Generated.IVTLTargetSystem,SPF.Server.Schema.Interface.Generated.IVTLValidationRule,Intergraph.SPF.Services.RequestContextService.Implementation.ISPFRequestContextService,SPF.Server.Schema.Interface.Generated.IVTLJob)">
+ <summary>
+ Prepare the reponse validation with all the error details
+ </summary>
+ <param name="lobjReaderOfInvalidPropertyValues"></param>
+ <param name="lobjTargetSystem"></param>
+ <param name="pobjRule"></param>
+ <param name="pobjRequestContextService"></param>
+ <param name="pobjJob"></param>
+ <returns></returns>
+</member>
+<member name="M:Intergraph.VTL.Server.CustomRule.VTLHTCIsPipingTagRule.GetDuplicatesInExistingCSV(SPF.Common.DataAccessLayer.ProviderClasses.IDBProvider,SPF.Server.Schema.Interface.Generated.IVTLJob,System.String)">
+ <summary>
+ Gets the duplicate tags from the existing CSV
+ </summary>
+ <param name="pobjProvider">Provider</param>
+ <param name="pobjJob">job</param>
+ <param name="pstrExactString">constant string to differentiate piping classification</param>
+ <returns>duplicate tags thats in the current CSV</returns>
+</member>
+<member name="M:Intergraph.VTL.Server.CustomRule.VTLHTCIsPipingTagRule.GetDuplicatesInTargetSystem(SPF.Common.DataAccessLayer.ProviderClasses.IDBProvider,SPF.Server.Schema.Interface.Generated.IVTLJob,System.String)">
+ <summary>
+ Gets the duplicate tags from the target system
+ </summary>
+ <param name="pobjProvider">Provider</param>
+ <param name="pobjJob">job</param>
+ <param name="pstrExactString">constant string to differentiate piping classification</param>
+ <returns>Duplicate tags in the target systems</returns>
+</member>
+</members>
+</doc>

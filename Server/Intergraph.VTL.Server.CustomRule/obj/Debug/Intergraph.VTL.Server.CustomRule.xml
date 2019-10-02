@@ -1,0 +1,56 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Intergraph.VTL.Server.CustomRule
+</name>
+</assembly>
+<members>
+<member name="T:Intergraph.VTL.Server.CustomRule.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Intergraph.VTL.Server.CustomRule.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Intergraph.VTL.Server.CustomRule.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:Intergraph.VTL.Server.CustomRule.Intergraph.VTL.Server.CustomRule.VTLHasExactStringValidationRule">
+ <summary>
+ Exact string validation rule: This is a simple example of how to validate the imported data set
+ Modified Rhanley CR-AM-86275 27/11/2014 - Support CONFIGLEVEL and CURRENTCONFIG requests
+ </summary>
+</member>
+<member name="M:Intergraph.VTL.Server.CustomRule.Intergraph.VTL.Server.CustomRule.VTLHasExactStringValidationRule.ExecuteValidation(SPF.Server.Schema.Interface.Generated.IVTLJob,SPF.Server.Schema.Interface.Generated.IVTLValidationRule,Intergraph.SPF.Services.RequestContextService.Implementation.ISPFRequestContextService)">
+ <summary>
+ Executes the validation.
+ </summary>
+ <param name="pobjJob">The pobj job.</param>
+ <param name="pobjRule">The pobj rule.</param>
+ <param name="pobjRequestContextService">The pobj request context service.</param>
+ <returns></returns>
+</member>
+<member name="T:Intergraph.VTL.Server.CustomRule.Intergraph.VTL.Server.CustomRule.VTLHTCIsPipingTagRule">
+ <summary>
+ Validation rule to check the name of non piping tags
+ Non-piping tags should have unique name across the system
+ </summary>
+</member>
+<member name="M:Intergraph.VTL.Server.CustomRule.Intergraph.VTL.Server.CustomRule.VTLHTCIsPipingTagRule.ExecuteValidation(SPF.Server.Schema.Interface.Generated.IVTLJob,SPF.Server.Schema.Interface.Generated.IVTLValidationRule,Intergraph.SPF.Services.RequestContextService.Implementation.ISPFRequestContextService)">
+ <summary>
+ Executes the validation.
+ </summary>
+ <param name="pobjJob">The pobj job.</param>
+ <param name="pobjRule">The pobj rule.</param>
+ <param name="pobjRequestContextService">The pobj request context service.</param>
+ <returns></returns>
+</member>
+</members>
+</doc>

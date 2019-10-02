@@ -1,0 +1,47 @@
+<Container>
+  <InterfaceDef>
+    <IObject UID="IVTLDefaultSiUoMValidationRule" Name="IVTLDefaultSiUoMValidationRule" Description="Verify Default UoM" ContainerID="VTL.VTLValidationSCHEMA" />
+    <IVTLRuleSupportsAutoGen />
+    <IEnumMetadata />
+    <IInterfaceDef />
+    <IInterfaceRole />
+    <ISchemaObj DisplayName="Verify Default UoM" />
+    <IPropCategory />
+  </InterfaceDef>
+
+  <Rel>
+    <IObject UID="IVTLValidationRulePI.IVTLDefaultSiUoMValidationRule" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+    <ISchemaObj />
+    <IRel UID1="IVTLValidationRulePI" IsRequired="False" DefUID="Implies" UID2="IVTLDefaultSiUoMValidationRule" />
+  </Rel>
+
+  <Rel>
+    <IObject UID="VTLValidationRule.IVTLDefaultSiUoMValidationRule" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+    <ISchemaObj />
+    <IRel UID1="VTLValidationRule" IsRequired="False" DefUID="Realizes" UID2="IVTLDefaultSiUoMValidationRule" OrderValue="0" />
+  </Rel>
+
+  <Rel>
+    <IObject UID="IVTLDefaultSiUoMValidationRule.IVTLPropertyValidationRule" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+    <ISchemaObj />
+    <IRel UID1="IVTLDefaultSiUoMValidationRule" IsRequired="True" DefUID="Implies" UID2="IVTLPropertyValidationRule" OrderValue="0" />
+  </Rel>
+
+  <Rel>
+    <IObject UID="IVTLDefaultSiUoMValidationRule.VTLUomUID" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+    <ISchemaObj />
+    <IRel UID1="IVTLDefaultSiUoMValidationRule" DefUID="Exposes" UID2="VTLUomUID" OrderValue="0" />
+  </Rel>
+  
+  <PropertyDef>
+    <IObject UID="VTLUomUID" Name="VTLUomUID" Description="Unit of measure UID." ContainerID="VTL.VTLValidationSCHEMA" />
+    <IPropertyDef />
+    <ISchemaObj DisplayName="Unit of measure UID" />
+  </PropertyDef>
+
+  <Rel>
+    <IObject UID="VTLUomUID.string" Name="" Description="" ContainerID="VTL.VTLValidationSCHEMA" />
+    <ISchemaObj />
+    <IRel UID1="VTLUomUID" IsRequired="False" DefUID="ScopedBy" UID2="string" OrderValue="0" />
+  </Rel>
+</Container>

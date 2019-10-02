@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13D7F8AC-FA04-4B5F-8960-0AA385BE14E4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>Intergraph.SPF.HTCServer</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTC101Server\bin\</OutputPath>
+    <DocumentationFile>Intergraph.SPF.HTCServer.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Intergraph.SPF.HTCServer.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.DataAccessLayer, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCTServer\bin\Common.DataAccessLayer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCPServer\bin\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58" />
+    <Reference Include="Intergraph.SPF.DAL.Common, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCTServer\bin\Intergraph.SPF.DAL.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Intergraph.SPF.Services.FoundationServices, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Intergraph.VTL.Common, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCFServer\bin\Intergraph.VTL.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Intergraph.VTL.Server.Module, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SmartPlant Foundation 2018 Server Files\Web_Sites\SDVTServer\bin\Intergraph.VTL.Server.Module.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Intergraph.VTL.Server.Services.Common.Classes, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SmartPlant Foundation 2018 Server Files\Web_Sites\SDVTServer\bin\Intergraph.VTL.Server.Services.Common.Classes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Intergraph.VTL.Server.Services.Common.Contracts, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SmartPlant Foundation 2018 Server Files\Web_Sites\SDVTServer\bin\Intergraph.VTL.Server.Services.Common.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Intergraph.VTL.Server.Services.TargetSystem.Contracts, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SmartPlant Foundation 2018 Server Files\Web_Sites\SDVTServer\bin\Intergraph.VTL.Server.Services.TargetSystem.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Intergraph.VTL.Server.Services.Validation.Classes, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SmartPlant Foundation 2018 Server Files\Web_Sites\SDVTServer\bin\Intergraph.VTL.Server.Services.Validation.Classes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="pdfbox-1.8.9, Version=1.8.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCPServer\bin\pdfbox-1.8.9.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SPFCommon, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCTServer\bin\SPFCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SPFServerModuleAppLayer, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCTServer\bin\SPFServerModuleAppLayer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SPFServerModuleCore, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCTServer\bin\SPFServerModuleCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SPF\Server\Common\GenerateTRHTML.vb" />
+    <Compile Include="SPF\Server\Common\HTCHelper.vb" />
+    <Compile Include="SPF\Server\Modules\HTCCustomServerModule.vb" />
+    <Compile Include="SPF\Server\Schema\Default\IHTCAutoSignOffOverdueStepsTaskDefault.vb" />
+    <Compile Include="SPF\Server\Schema\Default\IHTCDocumentMasterDefault.vb" />
+    <Compile Include="SPF\Server\Schema\Default\IHTCDocumentRevisionDefault.vb" />
+    <Compile Include="SPF\Server\Schema\Default\IHTCJobDefault.vb" />
+    <Compile Include="SPF\Server\Schema\Default\IHTCTagDefault.vb" />
+    <Compile Include="SPF\Server\Schema\Default\IHTCTerminationDocumentAccessTaskDefault.vb" />
+    <Compile Include="SPF\Server\Schema\Default\IHTCTransmittalDefault.vb" />
+    <Compile Include="SPF\Server\Schema\Generated\IHTCAutoSignOffOverdueStepsTask.vb" />
+    <Compile Include="SPF\Server\Schema\Generated\IHTCDocumentMaster.vb" />
+    <Compile Include="SPF\Server\Schema\Generated\IHTCDocumentRevision.vb" />
+    <Compile Include="SPF\Server\Schema\Generated\IHTCJob.vb" />
+    <Compile Include="SPF\Server\Schema\Generated\IHTCTag.vb" />
+    <Compile Include="SPF\Server\Schema\Generated\IHTCTerminateDocumentAccessTask.vb" />
+    <Compile Include="SPF\Server\Schema\Generated\IHTCTransmittal.vb" />
+    <Compile Include="SPF\Server\Schema\Overrides\IObjectDefault1.vb" />
+    <Compile Include="SPF\Server\Schema\Overrides\ISPFConditionDefault1.vb" />
+    <Compile Include="SPF\Server\Schema\Overrides\ISPFFileDefault1.vb" />
+    <Compile Include="SPF\Server\Schema\Overrides\ISPFMergableItemDefault1.vb" />
+    <Compile Include="SPF\Server\Schema\Overrides\ISPFObjectWorkflowStepDefault1.vb" />
+    <Compile Include="SPF\Server\Workflow\HTCConvertDwgForNavigation.vb" />
+    <Compile Include="SPF\Server\Workflow\HTCExtractTagTextFromDocument.vb" />
+    <Compile Include="SPF\Server\Workflow\HTCUpdateGraphicsMapFile.vb" />
+    <Compile Include="SPF\Server\Workflow\HTCValidateProjectForReview.vb" />
+    <Compile Include="VTL\Server\CustomRules\IVTLHTCIsPipingTagRule\IVTLHTCIsPipingTagRule.vb" />
+    <Compile Include="VTL\Server\CustomRules\IVTLHTCIsPipingTagRule\VTLHTCIsPipingTagRule.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SPF\Server\APIs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VTL\Server\CustomRules\IVTLHTCIsPipingTagRule\IVTLHTCIsPipingTag.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

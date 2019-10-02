@@ -1,0 +1,19 @@
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCServer\bin\Intergraph.VTL.Server.CustomRule.dll
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCServer\bin\Intergraph.VTL.Server.CustomRule.pdb
+C:\SmartPlant Foundation 2018 Server Files\Web_Sites\HTCServer\bin\Intergraph.VTL.Server.CustomRule.xml
+D:\Work\HW Total\Code Samples\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.vbprojAssemblyReference.cache
+D:\Work\HW Total\Code Samples\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.Resources.resources
+D:\Work\HW Total\Code Samples\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.vbproj.GenerateResource.cache
+D:\Work\HW Total\Code Samples\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.vbproj.CoreCompileInputs.cache
+D:\Work\HW Total\Code Samples\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.vbproj.CopyComplete
+D:\Work\HW Total\Code Samples\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.dll
+D:\Work\HW Total\Code Samples\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.xml
+D:\Work\HW Total\Code Samples\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.pdb
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.vbprojAssemblyReference.cache
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.Resources.resources
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.vbproj.GenerateResource.cache
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.vbproj.CoreCompileInputs.cache
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.vbproj.CopyComplete
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.dll
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.xml
+D:\Work\HW Total\TFS\HanwaTotal\Customization\Server\Intergraph.VTL.Server.CustomRule\obj\Debug\Intergraph.VTL.Server.CustomRule.pdb
